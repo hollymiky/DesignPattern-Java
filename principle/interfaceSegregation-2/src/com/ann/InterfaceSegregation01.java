@@ -7,6 +7,11 @@ package com.ann;
  * 接口隔离原则---发现问题
  * <p>
  * interface segregation principle---found problem
+ *
+ * 类B、D分别实现了Interface1接口中的所有方法，类A通过接口的引用依赖了类B，
+ * 但是类A只需要用到1、2、3方法，4、5方法不需要；
+ * 类C通接口引用依赖了类D，但是类C只用到1、4、5方法，2、3方法不需要。
+ * 这就违反了接口隔离原则
  */
 public class InterfaceSegregation01 {
 
