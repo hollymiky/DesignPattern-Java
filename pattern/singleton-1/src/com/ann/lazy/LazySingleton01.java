@@ -1,14 +1,14 @@
 package com.ann.lazy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author longquan
  * @date 2020/5/20 5:52 下午
  * <p>
  * <p>
  * 懒汉式（线程不安全）
+ *
+ * 线程不安全，单线程下可以使用
+ * 优化方案 参考 com.ann.lazy.LazySingleton02
  */
 public class LazySingleton01 {
 
