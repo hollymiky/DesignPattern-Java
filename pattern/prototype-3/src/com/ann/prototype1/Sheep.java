@@ -1,12 +1,12 @@
-package com.ann.improve;
+package com.ann.prototype1;
 
 /**
  * @author longquan
  * @date 2020/5/22 3:51 下午
- * <p>
+ *
  * 羊
  */
-public class Sheep implements Cloneable {
+public class Sheep {
 
     private String name;
     private int age;
@@ -49,19 +49,5 @@ public class Sheep implements Cloneable {
                 ", age=" + age +
                 ", color='" + color + '\'' +
                 '}';
-    }
-
-    /**
-     * 重写clone方法，克隆该实例，使用默认克隆方法进行
-     */
-    @Override
-    protected Object clone() {
-        Sheep sheep = null;
-        try {
-            sheep = (Sheep) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return sheep;
     }
 }
