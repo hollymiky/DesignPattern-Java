@@ -1,4 +1,4 @@
-package com.ann.prototype1.improve;
+package com.ann.prototype2;
 
 /**
  * @author longquan
@@ -11,6 +11,9 @@ public class Sheep implements Cloneable {
     private String name;
     private int age;
     private String color;
+
+    //  新增一个属性，也是Sheep对象
+    public Sheep friend;
 
     public Sheep(String name, int age, String color) {
         this.name = name;
