@@ -13,6 +13,10 @@ public class IntegerDemo {
          * 如果不在这个范围内，仍然使用new的方式新建一个对象
          */
 
+        /**
+         * 如果使用valueOf方法得到一个Integer实例，范围在 -128~127，执行速度会比new Integer更快
+         */
+
         //  得到x实例，类型Integer
         Integer x = Integer.valueOf(127);
         //  得到y实例，类型Integer
