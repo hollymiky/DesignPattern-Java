@@ -18,8 +18,12 @@ public class TeacherDaoProxy implements ITeacherDao {
 
     @Override
     public void teach() {
-        System.out.println("代理开始...");
+        // 共同方法类似AOP
+        System.out.println("代理开始 目标代理之前执行 完成某些操作...");
 
-        System.out.println("代理结束...");
+        //  目标代理
+        target.teach();
+
+        System.out.println("提交...");
     }
 }
