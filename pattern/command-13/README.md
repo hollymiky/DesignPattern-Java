@@ -6,3 +6,12 @@
 4. 通俗易懂的理解，将军发布命令，士兵去执行。其中有几个角色：将军（命令发布者）、士兵（命令的具体执行者）、命令（连接将军和士兵）
 
 > Invoker是调用者(将军)，Receiver是被调用者(士兵)，MyCommand是命令，实现了Command接口，持有接受对象
+
+
+**原理类图**
+![原理类图](http://cdn.qiniu.hollymiky.cn/FjpfAJeLsY2bwSZ7EnHxFRmuwOcX)
+
+1. Invoker 是调用者角色
+2. Command 是命令角色，需要执行的所有命令都在这里，可以是接口或抽象类
+3. Receiver 是接收者角色，知道如何实施和执行一个请求相关的操作
+4. ConcreteCommand 将一个接收者对象与一个命令（动作）绑定，调用接收者相应的操作，实现execute
