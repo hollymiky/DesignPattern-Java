@@ -36,5 +36,23 @@ public class RemoteController {
     public void onButtonWasPushed(int no){
         //  找到按下开的按钮，并调用对应方法
         onCommands[no].execute();
+
+        //  记录这次的操作，用于撤销
+        undoCommand = onCommands[no];
     }
+
+    //  按下关按钮
+    public void offButtonWasPushed(int no){
+        //  找到按下开的按钮，并调用对应方法
+        offCommands[no].execute();
+
+        //  记录这次的操作，用于撤销
+        undoCommand = offCommands[no];
+    }
+
+    //  按下撤销按钮
+    public void undoButtonWasPushed(){
+        undoCommand.undo();
+    }
+
 }
